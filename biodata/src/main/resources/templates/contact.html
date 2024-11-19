@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>Halaman Pembuka</a></li>
+                <li><a href="/biodata"><i class="fas fa-user"></i>Lihat Biodata</a></li>
+                <li><a href="/contact"><i class="fas fa-envelope"></i>Kontak Saya</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Ubah Tema</button>
+    </header>
+    <div class="container">
+        <h1>Kontak Saya</h1>
+        <p>Jika Anda ingin menghubungi saya, silakan isi formulir di bawah ini:</p>
+        <form action="/send-message" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukan Nama Anda"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukan Email Anda"><br>
+            <label for="message">Pesan:</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Tulis Pesan Anda di sini..."></textarea><br>
+            <input type="submit" value="Kirim">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Wahyu Noer Rahmat. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            toggleButton.textContent = isDarkMode ? 'Ubah ke Light Mode' : 'Ubah ke Dark Mode';
+        });
+    </script>
+</body>
+</html>

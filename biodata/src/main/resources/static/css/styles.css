@@ -1,0 +1,210 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Warna latar belakang light mode */
+    color: #333; /* Warna teks light mode */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: transparent; /* Transparan dengan 100% opasitas */
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    width: 100%;
+    z-index: 1000; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* Warna latar belakang untuk biodata utama */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Memastikan semua konten berada di tengah */
+}
+
+.home {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3gZbJiHw8u1HzeR4mTn8Cf11aG9rmTTBGnaqwOYRbIvWLdymsJHNN3psq_sBhcoAMP3KHzh7c7tynFvy-PorTNZuPVYBRz1NYi0chNTa730VauBl0C6EJJNQ2pkGV55XL4xLb-SpfuohJoo-KKIxZBzeX5vhyAlD1C0oXBZTj-r_YiHQMQuQfqXKrv-U/s1280/1226.jpg'); /* Ganti dengan URL gambar yang sesuai */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 60px; /* Memberikan ruang untuk header yang tetap */
+}
+
+.home h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.home p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+h3 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+p, ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+hr {
+    border: 1px solid #007bff;
+    margin: 20px 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+
+@media (max-width: 600px) {
+    nav ul  {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    nav ul li{
+        margin-bottom: 10px;
+    }
+
+    .container{
+        padding: 15px;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #theme-togle{
+        margin-top: 10px;
+    }
+
+    #theme-toggle {
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    
+    #theme-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Warna latar belakang untuk dark mode */
+    color: #e0e0e0; /* Warna teks untuk dark mode */
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e; /* Warna latar belakang kontainer untuk dark mode */
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0; /* Warna tautan untuk dark mode */
+}
+
+body.dark-mode button {
+    background-color: #bb86fc; /* Warna tombol untuk dark mode */
+}
+
+body.dark-mode button:hover {
+    background-color: #3700b3; /* Warna tombol saat hover untuk dark mode */
+}
+
+footer {
+    background-color: transparent; /* 100% transparan */
+    color: white; /* Warna teks di footer */
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Agar footer berada di bawah konten */
+    width: 100%;
+    margin-top: 20px; /* Memberikan jarak dari konten di atas */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212; /* Warna latar belakang dark mode */
+    color: #e0e0e0; /* Warna teks dark mode */
+}
+
+body.dark-mode header {
+    background-color: transparent; /* 100% transparan untuk dark mode */
+}
+
+body.dark-mode footer {
+    background-color: transparent; /* 100% transparan untuk dark mode */
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0; /* Warna link di header untuk dark mode */
+}
+
+body.dark-mode .home {
+    color: #e0e0e0; /* Warna teks di hero untuk dark mode */
+}
